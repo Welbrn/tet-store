@@ -1,0 +1,43 @@
+@import "../../styles/utils/variables.scss";
+@import "../../styles/utils/mixins.scss";
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &__button {
+    background-color: $filter-button-bg-color;
+    border: none;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: $global-border-radius;
+    border: 1px solid $filter-button-border-color;
+    transition: background-color 0.3s;
+    height: 40px;
+    max-width: 100%;
+
+    &--active {
+      background-color: $active-filter-button-bg-color;
+      color: $active-filter-button-text-color;
+      border: 1px solid $active-filter-button-border-color;
+    }
+
+    &:hover {
+      border: $hover-filter-button-border-color 1px solid;
+    }
+  }
+
+  @include on-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__button {
+      margin: 5px;
+      width: auto;
+    }
+  }
+}

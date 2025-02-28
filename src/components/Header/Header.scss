@@ -1,0 +1,58 @@
+@import "../../styles/utils/variables.scss";
+@import "../../styles/utils/mixins.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 50px;
+  margin-bottom: 16px;
+  background-color: #fff;
+
+  &__logo {
+    display: block;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    list-style: none;
+    margin: 0 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__cart {
+    background-image: url(../../../public/Image/Cart.svg);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: $header-cart-count-color;
+    color: $header-cart-count-text-color;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}

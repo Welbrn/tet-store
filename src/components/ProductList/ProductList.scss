@@ -1,0 +1,28 @@
+@import "../../styles/utils/variables.scss";
+@import "../../styles/utils/mixins.scss";
+
+.filter {
+  display: flex;
+  
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-auto-rows: auto;
+  justify-content: flex-start;
+  row-gap: 40px;
+  column-gap: 30px;
+  margin-bottom: 40px;
+  height: 100%;
+  justify-content: center;
+
+  @include on-tablet {
+    grid-template-columns: repeat(2, 280px);
+    column-gap: 15px;
+  }
+
+  @include on-desktop {
+    grid-template-columns: repeat(4, 280px);
+  }
+}
